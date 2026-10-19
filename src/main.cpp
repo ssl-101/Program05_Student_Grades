@@ -15,7 +15,7 @@ struct Student {
 //functions 
 bool readGradeData (const string& filename, Student*& students, int& numStudents, int& numTests);
 void processGrades (Student* students, int numStudents, int numTests);
-void displayReport (const Student* students, int numStudents, int numTest);
+void displayReport (const Student* students, int numStudents, int numTests);
 void releaseMemory (Student*& students, int numStudents);
 
 int main() {
@@ -41,12 +41,32 @@ int main() {
 
     return 0;
 }
-bool readGradeData(const string& filename, Student*& students, int& numStudents, int& numTest) {
+bool readGradeData(const string& filename, Student*& students, int& numStudents, int& numTests) {
     ifstream inFile(filename);
     if (!inFile.is_open()) {
         cerr << "Error: could not open file" << filename << endl;
         return false;
     }
+    inFile >> numStudents >> numTests;
+    if (numStudents <= 0 || numTests <=0) {
+        cerr << "Error: Invalid header, must be a positive number." << endl;
+        inFile.close();
+        return false;
+    }
 
     //outer array
-}
+    students = new Student[numStudents];
+
+    for (int i = 0; i < numStudents; ++i) {
+        inFile >> students[i].lastName >> students[i].studentID;
+
+        // inner array for score
+        students[i].scores = new double[numTests];
+        for (int j = 0; j < numTests; ++j) {
+            inFile >> students[i].scores[j];
+        }
+    }
+    
+    inFile.close();
+    return true;
+} 
