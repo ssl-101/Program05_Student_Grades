@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/Users/sihamlee/Documents/CSC222/Program05_Student_Grades/build",
+  "command": "/usr/bin/clang++ -I/Users/sihamlee/Documents/CSC222/Program05_Student_Grades/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/Program05_Student_Grades.dir/src/main.cpp.o -c /Users/sihamlee/Documents/CSC222/Program05_Student_Grades/src/main.cpp",
+  "file": "/Users/sihamlee/Documents/CSC222/Program05_Student_Grades/src/main.cpp",
+  "output": "/Users/sihamlee/Documents/CSC222/Program05_Student_Grades/build/CMakeFiles/Program05_Student_Grades.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/sihamlee/Documents/CSC222/Program05_Student_Grades/build",
+  "command": "/usr/bin/clang++ -I/Users/sihamlee/Documents/CSC222/Program05_Student_Grades/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/Program05_Student_Grades.dir/src/Students.cpp.o -c /Users/sihamlee/Documents/CSC222/Program05_Student_Grades/src/Students.cpp",
+  "file": "/Users/sihamlee/Documents/CSC222/Program05_Student_Grades/src/Students.cpp",
+  "output": "/Users/sihamlee/Documents/CSC222/Program05_Student_Grades/build/CMakeFiles/Program05_Student_Grades.dir/src/Students.cpp.o"
+}
+]

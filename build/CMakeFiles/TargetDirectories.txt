@@ -1,0 +1,3 @@
+/Users/sihamlee/Documents/CSC222/Program05_Student_Grades/build/CMakeFiles/Program05_Student_Grades.dir
+/Users/sihamlee/Documents/CSC222/Program05_Student_Grades/build/CMakeFiles/edit_cache.dir
+/Users/sihamlee/Documents/CSC222/Program05_Student_Grades/build/CMakeFiles/rebuild_cache.dir
