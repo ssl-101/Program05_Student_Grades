@@ -70,3 +70,22 @@ bool readGradeData(const string& filename, Student*& students, int& numStudents,
     inFile.close();
     return true;
 } 
+
+// calculating averages and assigne letter grades in one loop
+void processGrades (Student* students, int numStudents, int numTests) {
+     for (int i = 0; i < numStudents; ++i) {
+         double sum = 0.0;
+         for (int j = 0; j < numTests; ++j) { 
+             sum += students[i]. scores [j];
+         }
+      // Calculate average
+      students[i].average = (numTests > 0) ? (sum / numTests) : 0.0;
+     // Assign letter grade 
+     double avg = students[i]. average;
+     if (avg >= 90.0) students[i].letterGrade = 'A';
+     else if (avg >= 80.0) students[i].letterGrade = 'B';
+     else if (avg >= 70.0) students[i].letterGrade = 'C';
+     else if (avg >= 60.0) students[i].letterGrade = 'D';
+     else students[i].letterGrade = 'F';
+  }
+}
